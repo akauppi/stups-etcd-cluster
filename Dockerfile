@@ -20,8 +20,8 @@ RUN export DEBIAN_FRONTEND=noninteractive \
     && rm -rf /var/lib/apt/lists/*
 
 ## Install etcd
-ENV ETCDVERSION 2.3.7
-RUN curl -L https://github.com/coreos/etcd/releases/download/v${ETCDVERSION}/etcd-v${ETCDVERSION}-linux-amd64.tar.gz | tar xz -C /bin --xform='s/$/v2/x' --strip=1 --wildcards --no-anchored etcd
+#ENV ETCDVERSION 2.3.7
+#RUN curl -L https://github.com/coreos/etcd/releases/download/v${ETCDVERSION}/etcd-v${ETCDVERSION}-linux-amd64.tar.gz | tar xz -C /bin --xform='s/$/v2/x' --strip=1 --wildcards --no-anchored etcd
 
 ENV ETCDVERSION 3.0.17
 RUN curl -L https://github.com/coreos/etcd/releases/download/v${ETCDVERSION}/etcd-v${ETCDVERSION}-linux-amd64.tar.gz | tar xz -C /bin --strip=1 --wildcards --no-anchored etcd etcdctl
